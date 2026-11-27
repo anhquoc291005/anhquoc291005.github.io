@@ -146,7 +146,8 @@ h2[id] { scroll-margin-top: 1rem; }
 }
 
 .project-media img {
-  width: min(100%, 21rem);
+  width: 100%;
+  max-width: 21rem;
   height: auto;
   align-self: flex-start;
   border: 1px solid var(--line);
