@@ -1,0 +1,9 @@
+title: Anh Quoc
+description: CV cá nhân, kinh nghiệm và dự án của Anh Quoc.
+lang: vi
+url: https://anhquoc291005.github.io
+theme: minima
+markdown: kramdown
+github_username: anhquoc291005
+exclude:
+  - README.md
