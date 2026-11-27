@@ -42,7 +42,8 @@ Thời gian học
 
 ## Dự án {#du-an}
 
-Bạn có thể xem các dự án công khai [trên GitHub](https://github.com/anhquoc291005?tab=repositories).
+Dự án sẽ được bổ sung.
+{: .pending }
 
 ## Kỹ năng {#ky-nang}
 
