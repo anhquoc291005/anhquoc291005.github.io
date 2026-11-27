@@ -2,7 +2,11 @@
 layout: default
 ---
 
-[Giới thiệu](#gioi-thieu) [Kinh nghiệm](#kinh-nghiem) [Dự án](#du-an) [Kỹ năng](#ky-nang) [Liên hệ](#lien-he) [CV](#cv)
+{% assign cv_pdf = site.static_files | where: 'path', '/assets/cv.pdf' | first %}
+{% assign cv_link = '#cv' %}
+{% if cv_pdf %}{% assign cv_link = cv_pdf.path | relative_url %}{% endif %}
+
+[Giới thiệu](#gioi-thieu) [Kinh nghiệm](#kinh-nghiem) [Dự án](#du-an) [Kỹ năng](#ky-nang) [Liên hệ](#lien-he) [CV]({{ cv_link }})
 {: .profile-nav }
 
 ![Ảnh đại diện trên GitHub](https://github.com/anhquoc291005.png?size=320)
@@ -17,7 +21,7 @@ layout: default
 CV trực tuyến · Kinh nghiệm, học vấn và dự án
 {: .profile-role }
 
-[Xem GitHub](https://github.com/anhquoc291005) [Thông tin CV](#cv)
+[Xem GitHub](https://github.com/anhquoc291005) [{% if cv_pdf %}Xem CV PDF{% else %}Thông tin CV{% endif %}]({{ cv_link }})
 {: .profile-links }
 
 ## Giới thiệu {#gioi-thieu}
@@ -27,8 +31,14 @@ Hồ sơ đang được cập nhật.
 
 ## Kinh nghiệm và học vấn {#kinh-nghiem}
 
-Thông tin công việc và học vấn sẽ được bổ sung.
-{: .pending }
+Thời gian làm việc
+: **Kinh nghiệm**
+  Thông tin về vị trí, tổ chức và đóng góp đang được cập nhật.
+
+Thời gian học
+: **Học vấn**
+  Thông tin về trường và chuyên ngành đang được cập nhật.
+{: .experience-list }
 
 ## Dự án {#du-an}
 
@@ -45,5 +55,9 @@ Thông tin kỹ năng sẽ được bổ sung.
 
 ## CV {#cv}
 
+{% if cv_pdf %}
+[Xem CV bản PDF]({{ cv_link }})
+{% else %}
 Bản CV PDF sẽ được bổ sung.
 {: .pending }
+{% endif %}
